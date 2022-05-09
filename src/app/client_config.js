@@ -152,7 +152,7 @@ const VYB = {
 
 export const CONFIG_MAP = {
     // testing heroku/local options
-    'localhost:8080': CENT,
+    'localhost:8080': VYB,
     'eonhetest.herokuapp.com': VYB,
     'www.dunksocial.io': DUNK,
     'dunksocial.io': DUNK,
