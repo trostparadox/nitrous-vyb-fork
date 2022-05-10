@@ -17,6 +17,7 @@ import { actions as fetchDataSagaActions } from 'app/redux/FetchDataSaga';
 import Userpic from 'app/components/elements/Userpic';
 import { HIVE_SIGNUP_URL, SIGNUP_URL } from 'shared/constants';
 import AppLogo from 'app/components/elements/AppLogo';
+import AppLogo2 from 'app/components/elements/AppLogo2';
 import normalizeProfile from 'app/utils/NormalizeProfile';
 import Announcement from 'app/components/elements/Announcement';
 import GptAd from 'app/components/elements/GptAd';
@@ -243,7 +244,8 @@ class Header extends React.Component {
 
         const _feed = username && `/@${username}/feed`;
         const logo_link = _feed && pathname != _feed ? _feed : '/';
-
+        const logo_link2 = pathname;
+ 
         //TopRightHeader Stuff
         const defaultNavigate = e => {
             if (e.metaKey || e.ctrlKey) {
@@ -346,6 +348,10 @@ class Header extends React.Component {
                             <Link to={logo_link}>
                                 <AppLogo />
                             </Link>
+                            {/*LOGO2*/}
+                            <Link target='_blank' to={APP2_URL + logo_link2}>
+                                <AppLogo2 />
+                            </Link>                        
                         </div>
 
                         <div className="large-4 columns show-for-large large-centered Header__sort">
