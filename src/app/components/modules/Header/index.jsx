@@ -245,7 +245,10 @@ class Header extends React.Component {
         const _feed = username && `/@${username}/feed`;
         const logo_link = _feed && pathname != _feed ? _feed : '/';
         const logo_link2 = pathname;
- 
+        // const app2_url = hostConfig['APP2_URL'];
+        //const app2_url = state.app.getIn(['hostConfig', 'APP2_URL']);
+       const app2_url = 'https://www.proofofbrain.io';
+  
         //TopRightHeader Stuff
         const defaultNavigate = e => {
             if (e.metaKey || e.ctrlKey) {
@@ -349,7 +352,7 @@ class Header extends React.Component {
                                 <AppLogo />
                             </Link>
                             {/*LOGO2*/}
-                            <Link target='_blank' to={APP2_URL + logo_link2}>
+                            <Link target='_blank' to={app2_url + logo_link2}>
                                 <AppLogo2 />
                             </Link>                        
                         </div>
